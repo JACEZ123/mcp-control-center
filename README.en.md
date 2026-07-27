@@ -6,7 +6,7 @@ A local-first governance platform for enterprise MCP infrastructure. It brings S
 
 This is not another public MCP marketplace, and it is more than a gateway configuration panel. It addresses a different question: **once an organization has built 50, 100, or more internal MCP tools, how can product, engineering, operations, and platform teams actually govern them at scale?**
 
-![MCP Control Center overview](./docs/screenshots/01-overview.png)
+![MCP Control Center overview](./docs/screenshots/en/01-overview.png)
 
 > This repository is currently a complete interactive prototype. It uses structured demo data, implements the major pages, dialogs, navigation paths, and cross-page state changes, and exposes an API adapter contract for future integration. It does not yet connect to a production database, real traces, approval systems, or MCP process management.
 
@@ -75,7 +75,7 @@ The overview is designed to answer what the team should fix first:
 - Description quality and maintenance priority.
 - Governance recommendations for high-volume/low-score, stale, low-usage, or high-error tools.
 
-![Enterprise MCP overview](./docs/screenshots/01-overview.png)
+![Enterprise MCP overview](./docs/screenshots/en/01-overview.png)
 
 ### 2. Service as a business governance layer
 
@@ -90,7 +90,7 @@ For example, a “Chart Generation” Service may own:
 
 The Service view aggregates child MCPs, calls, success rate, tokens, latency, errors, owners, versions, and connected AI clients. A quick drawer supports operational inspection, while a full detail page supports deeper governance.
 
-![Service management](./docs/screenshots/02-service-management.png)
+![Service management](./docs/screenshots/en/02-service-management.png)
 
 ### 3. MCP assets, contracts, and prompt management
 
@@ -107,7 +107,7 @@ Each MCP detail page brings together:
 
 This makes it possible to repair production contract, parameter, prompt, and response issues from a single control plane.
 
-![MCP detail](./docs/screenshots/03-mcp-detail.png)
+![MCP detail](./docs/screenshots/en/03-mcp-detail.png)
 
 ### 4. Tiered authentication and per-call strong authentication
 
@@ -121,11 +121,11 @@ MCP Control Center models five authentication strategies:
 
 Strong authentication is never reused across calls. The password is excluded from traces, and the manual test workflow simulates “enter password → authorize this call → expire immediately after completion.”
 
-![MCP authentication](./docs/screenshots/04-authentication.png)
+![MCP authentication](./docs/screenshots/en/04-authentication.png)
 
 When a manual test targets a strongly authenticated MCP, the user must authorize the individual call with a password:
 
-![Per-call strong authentication](./docs/screenshots/09-strong-auth-call.png)
+![Per-call strong authentication](./docs/screenshots/en/09-strong-auth-call.png)
 
 ### 5. Call, performance, and token analytics
 
@@ -147,7 +147,7 @@ These metrics reveal:
 - Which tools were built but are rarely selected by AI.
 - Which high-volume tools have description, stability, or cost problems.
 
-![Call analytics](./docs/screenshots/05-call-analytics.png)
+![Call analytics](./docs/screenshots/en/05-call-analytics.png)
 
 ### 6. Error-code location and complete call context
 
@@ -161,11 +161,11 @@ When operations only has an error code such as `MCP-AUTH-401`, the platform can 
 
 Opening a result shows the original user request, AI conversation, model selection reason, actual tool input, tool output, stack/context, surrounding calls, description version, MCP version, and recommended fix.
 
-![Error-code location](./docs/screenshots/06-error-code-location.png)
+![Error-code location](./docs/screenshots/en/06-error-code-location.png)
 
 The error-context modal reconstructs a de-identified demo trace: the user's original question → the AI's tool-selection decision → MCP request parameters → tool output → impact and fix suggestion. The `source_url: null` field in the output is the concrete cause shown in the screenshot for the missing citation field.
 
-![User conversation and tool-chain error context](./docs/screenshots/10-error-context-trace.png)
+![User conversation and tool-chain error context](./docs/screenshots/en/10-error-context-trace.png)
 
 ### 7. Publishing, canary rollout, and lifecycle
 
@@ -179,7 +179,7 @@ Business teams can submit MCPs through a shared workflow instead of spreadsheets
 
 The platform records version, approval, publish, unpublish, rollback, and audit events.
 
-![MCP publishing lifecycle](./docs/screenshots/07-publish-lifecycle.png)
+![MCP publishing lifecycle](./docs/screenshots/en/07-publish-lifecycle.png)
 
 ### 8. Roles, members, and Workspace permissions
 
@@ -191,7 +191,7 @@ Access control makes role membership explicit:
 - Create custom roles.
 - Audit permission and membership changes.
 
-![Permissions and role members](./docs/screenshots/08-permissions.png)
+![Permissions and role members](./docs/screenshots/en/08-permissions.png)
 
 ### 9. Service maintenance and local MCP configuration
 

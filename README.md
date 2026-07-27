@@ -6,7 +6,7 @@
 
 它不是又一个 MCP 市场，也不仅是 Gateway 配置面板。它试图解决的是：**当一家公司已经自研了 50、100 甚至更多 MCP 工具之后，如何让产品、研发、运维和运营团队真正管得住、看得清、改得动。**
 
-![MCP Control Center 总览](./docs/screenshots/01-overview.png)
+![MCP Control Center 总览](./docs/screenshots/zh/01-overview.png)
 
 > 当前仓库是一个功能完整的交互原型：使用结构化演示数据，所有主要页面、弹窗、跳转和跨页面状态均可操作，并预留真实 API 适配层。它尚未接入生产数据库、真实 Trace、审批系统和 MCP 进程管理。
 
@@ -75,7 +75,7 @@ flowchart LR
 - 描述质量、错误率和维护优先级。
 - 高调用低评分、低调用长期未更新、错误率异常等治理建议。
 
-![企业 MCP 治理总览](./docs/screenshots/01-overview.png)
+![企业 MCP 治理总览](./docs/screenshots/zh/01-overview.png)
 
 ### 2. Service：企业业务能力分组
 
@@ -90,7 +90,7 @@ Service 是本项目新增的核心管理层级。
 
 Service 视角可以查看下属 MCP、整体调用量、平均成功率、Token、响应时长、错误情况、负责人和客户端接入范围。列表点击后先打开抽屉，再进入完整详情，适合快速运营和深入治理两种工作方式。
 
-![Service 管理](./docs/screenshots/02-service-management.png)
+![Service 管理](./docs/screenshots/zh/02-service-management.png)
 
 ### 3. MCP 资产、契约和 Prompt 管理
 
@@ -107,7 +107,7 @@ Service 视角可以查看下属 MCP、整体调用量、平均成功率、Token
 
 团队可以快速修改工具描述和契约，统一处理线上 MCP 的参数、Prompt 和返回格式问题。
 
-![MCP 详情](./docs/screenshots/03-mcp-detail.png)
+![MCP 详情](./docs/screenshots/zh/03-mcp-detail.png)
 
 ### 4. 分级鉴权与强鉴权
 
@@ -121,11 +121,11 @@ Service 视角可以查看下属 MCP、整体调用量、平均成功率、Token
 
 强鉴权不会复用上一次授权，密码不会写入 Trace；手动测试会真实模拟“输入密码 → 授权本轮 → 调用结束后失效”的流程。
 
-![MCP 鉴权配置](./docs/screenshots/04-authentication.png)
+![MCP 鉴权配置](./docs/screenshots/zh/04-authentication.png)
 
 发起手动测试时，强鉴权 MCP 会在调用前要求用户完成本轮密码授权：
 
-![强鉴权本轮调用授权](./docs/screenshots/09-strong-auth-call.png)
+![强鉴权本轮调用授权](./docs/screenshots/zh/09-strong-auth-call.png)
 
 ### 5. 调用、性能与 Token 分析
 
@@ -147,7 +147,7 @@ Service 视角可以查看下属 MCP、整体调用量、平均成功率、Token
 - 哪些工具开发后几乎没有被 AI 使用。
 - 哪些工具调用量很高，却存在描述、稳定性或成本问题。
 
-![调用分析](./docs/screenshots/05-call-analytics.png)
+![调用分析](./docs/screenshots/zh/05-call-analytics.png)
 
 ### 6. 错误码定位与完整调用上下文
 
@@ -161,11 +161,11 @@ Service 视角可以查看下属 MCP、整体调用量、平均成功率、Token
 
 点击结果会进入对应 MCP 的错误码自查，继续查看用户原始问题、AI 对话、模型选择工具的原因、实际输入参数、工具返回、错误堆栈、前后置调用、工具描述版本和修复建议。
 
-![错误码定位](./docs/screenshots/06-error-code-location.png)
+![错误码定位](./docs/screenshots/zh/06-error-code-location.png)
 
 错误上下文弹窗会还原一条脱敏后的演示 Trace：用户真实问题 → AI 调用决策 → MCP 请求参数 → 工具返回结果 → 错误影响与修复建议。工具返回中的 `source_url: null` 与截图中的“引用来源缺少必填字段”对应，便于从错误现象反推契约问题。
 
-![用户对话与工具链错误上下文](./docs/screenshots/10-error-context-trace.png)
+![用户对话与工具链错误上下文](./docs/screenshots/zh/10-error-context-trace.png)
 
 ### 7. MCP 上架、灰度与生命周期
 
@@ -179,7 +179,7 @@ Service 视角可以查看下属 MCP、整体调用量、平均成功率、Token
 
 平台统一记录版本、审批、上架、下架、回滚和审计信息。
 
-![MCP 灰度发布](./docs/screenshots/07-publish-lifecycle.png)
+![MCP 灰度发布](./docs/screenshots/zh/07-publish-lifecycle.png)
 
 ### 8. 角色、成员与 Workspace 权限
 
@@ -191,7 +191,7 @@ Service 视角可以查看下属 MCP、整体调用量、平均成功率、Token
 - 新建自定义角色。
 - 记录权限和成员变更审计日志。
 
-![权限与角色成员](./docs/screenshots/08-permissions.png)
+![权限与角色成员](./docs/screenshots/zh/08-permissions.png)
 
 ### 9. 服务维护与本地 MCP 配置
 
